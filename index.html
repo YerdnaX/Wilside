@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Optimizacion de Tareas</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://cdn.jsdelivr.net/npm/@google/genai@latest/+esm"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Administrador de Tareas</h1>
+    <div class="form">
+      <input type="text" id="description" placeholder="Descripcion Tarea">
+      <input type="number" id="time" placeholder="Tiempo estimado (min)">
+      <button id="add-task-btn">Agregar Tarea</button>
+    </div>
+
+    <div class="output-box">
+      <h2>Lista TODO</h2>
+      <ul id="taskList"></ul>
+    </div>
+
+    <button id="optimize-btn" class="optimize-button">
+        <i id="optimize-loading-i" class="fa fa-circle-o-notch fa-spin"></i> Optimizar
+    </button> 
+
+    <div class="output-box">
+      <h2>Recomendacion</h2>
+      <p id="recommendation">Agrega tareas para tener recomendaciones</p>
+    </div>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
